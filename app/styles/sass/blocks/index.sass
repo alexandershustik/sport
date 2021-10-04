@@ -1,0 +1,395 @@
+.main
+    flex: 1 0 auto
+    position: relative
+    overflow: hidden
+.preheader
+    padding-top: 50px
+    @include media-breakpoint-up(lg)
+        padding-top: 150px
+    &::before
+        content: ''
+        position: absolute
+        top: 240px
+        right: -110px
+        background: url(../images/index/woman.png) no-repeat center center
+        background-size: contain
+        width: 300px
+        height: 300px
+        z-index: -1
+        @include media-breakpoint-up(lg)
+            height: 1300px
+            width: 1300px
+            right: -630px
+        @include media-breakpoint-up(xl)
+            top: 10px
+            right: -150px
+    &::after
+        content: ''
+        position: absolute
+        top: 240px
+        right: 20px
+        background: url(../images/contacts/dark-circle.png) no-repeat center center
+        background-size: contain
+        width: 100px
+        height: 100px
+        z-index: -2
+        @include media-breakpoint-up(lg)
+            width: 500px
+            height: 500px
+            top: 650px
+            right: 180px
+            z-index: -2
+        @include media-breakpoint-up(xl)
+            width: 400px
+            height: 400px
+            top: 50px
+            right: 630px
+    // .preheader__wrap
+    &__wrap
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: 240px
+            right: 20px
+            background: url(../images/contacts/color-circle.png) no-repeat center center
+            background-size: contain
+            width: 100px
+            height: 100px
+            z-index: -2
+            @include media-breakpoint-up(lg)
+                width: 1000px
+                height: 1000px
+                right: -650px
+                top: 560px
+            @include media-breakpoint-up(xl)
+                right: -200px
+                top: -140px
+    // .preheader__title
+    &__title
+        font-size: 25px
+        text-transform: uppercase
+        font-weight: 700
+        padding-bottom: 30px
+        font-family: axiforma, sans-serif
+        @include media-breakpoint-up(lg)
+            font-size: 115px
+            padding-bottom: 150px
+    // .preheader__btn
+    &__btn
+        border: none
+        background: transparent
+        padding: 15px 30px
+        font-size: 18px
+        border-radius: 25px
+        position: relative
+        transition: .2s
+        color: #000
+        @include media-breakpoint-up(lg)
+            font-size: 35px
+            padding: 40px 120px
+            border-radius: 100px
+        &::before
+            content: ''
+            background: linear-gradient(95deg, rgba(79,172,254,1) 0%, rgba(0,242,254,1) 100%)
+            box-shadow: 8px 11px 36.48px 1.52px rgba(0, 186, 255, 0.33)
+            border-radius: 25px
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            z-index: -1
+            opacity: 1
+            transition: .2s
+            @include media-breakpoint-up(lg)
+                padding: 40px 120px
+                border-radius: 100px
+        &::after
+            content: ''
+            background: linear-gradient(95deg, rgba(0,242,254,1) 0%,rgba(79,172,254,1) 100%)
+            box-shadow: 8px 11px 36.48px 1.52px rgba(0, 186, 255, 0.33)
+            border-radius: 25px
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            z-index: -1
+            opacity: 0
+            transition: .2s
+            @include media-breakpoint-up(lg)
+                padding: 40px 120px
+                border-radius: 100px
+        &:hover::after
+            opacity: 1
+        &:hover
+            text-decoration: none
+            color: #000
+
+.advantages
+    padding-top: 200px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 240px
+        left: -200px
+        background: url(../images/contacts/color-circle.png) no-repeat center center
+        background-size: contain
+        width: 300px
+        height: 300px
+        z-index: -1
+        @include media-breakpoint-up(lg)
+            height: 600px
+            width: 600px
+            left: -350px
+            top: 1000px
+        @include media-breakpoint-up(xl)
+            top: 320px
+            right: -150px
+    &::after
+        content: ''
+        position: absolute
+        top: 500px
+        right: -130px
+        background: url(../images/contacts/dark-circle.png) no-repeat center center
+        background-size: contain
+        width: 300px
+        height: 300px
+        z-index: -2
+        @include media-breakpoint-up(lg)
+            width: 500px
+            height: 500px
+            top: 770px
+            right: -160px
+            z-index: -2
+        @include media-breakpoint-up(xl)
+            width: 600px
+            height: 600px
+            top: 530px
+            right: 0px
+
+    // .advantages__title
+    &__title
+        font-size: 25px
+        text-transform: uppercase
+        font-weight: 700
+        padding-bottom: 30px
+        @include media-breakpoint-up(lg)
+            font-size: 115px
+            padding-bottom: 150px
+    // .advantages__wrap
+    &__wrap
+        @include media-breakpoint-up(lg)
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            margin: 0 -50px
+    // .advantages__item
+    &__item
+        background: #fff
+        padding: 40px 20px
+        border-radius: 25px
+        margin: 20px 0
+        box-shadow: 8px 11px 33.6px 1.4px rgba(0, 0, 0, 0.08)
+        text-decoration: none
+        color: #333
+        display: block
+        transition: .2s
+        font-family: axiforma, sans-serif
+        @include media-breakpoint-up(lg)
+            width: 100%
+            margin: 0 25px
+            padding: 80px 50px 50px
+            margin: 0 15px 30px
+            flex: 1 1 520px
+    &__img
+        height: 64px
+        object-fit: contain
+        padding-bottom: 20px
+        margin: 0 auto
+        display: block
+        @include media-breakpoint-up(lg)
+            height: 200px
+            padding-bottom: 100px
+            object-fit: contain
+
+    &__header
+        font-size: 22px
+        text-decoration: none
+        color: #333
+        transition: .2s
+        font-weight: bold
+        font-family: axiforma, sans-serif
+        text-transform: uppercase
+        &:hover
+            text-decoration: none
+        @include media-breakpoint-up(lg)
+            font-size: 40px
+            margin-bottom: 20px
+
+    // .advantages__desc
+    &__desc
+        font-size: 18px
+        text-decoration: none
+        color: #333
+        transition: .2s
+        font-family: axiforma, sans-serif
+        &:hover
+            text-decoration: none
+        @include media-breakpoint-up(lg)
+            font-size: 30px
+
+.lead
+    padding-top: 100px
+    position: relative
+    @include media-breakpoint-up(lg)
+        padding-top: 250px
+    &::before
+        content: ''
+        position: absolute
+        top: 0px
+        right: -200px
+        background: url(../images/contacts/color-circle.png) no-repeat center center
+        background-size: contain
+        width: 300px
+        height: 300px
+        z-index: -1
+        @include media-breakpoint-up(lg)
+            height: 600px
+            width: 600px
+            top: 500px
+            right: -200px
+        @include media-breakpoint-up(xl)
+            top: 500px
+            right: -200px
+    &::after
+        content: ''
+        position: absolute
+        top: 640px
+        left: -110px
+        background: url(../images/contacts/dark-circle.png) no-repeat center center
+        background-size: contain
+        width: 300px
+        height: 300px
+        z-index: -2
+        @include media-breakpoint-up(lg)
+            width: 500px
+            height: 500px
+            top: 1030px
+            right: -160px
+            z-index: -2
+        @include media-breakpoint-up(xl)
+            width: 300px
+            height: 300px
+            top: 50px
+            left: -160px
+            z-index: -2
+            transform: rotate(45deg)
+    // .lead__wrap
+    .header
+        font-size: 25px
+        text-transform: uppercase
+        font-weight: 700
+        padding-bottom: 30px
+        @include media-breakpoint-up(lg)
+            font-size: 115px
+            padding-bottom: 150px
+    &__wrap
+        @include media-breakpoint-up(xl)
+            display: flex
+            justify-content: space-between
+.form
+    background: #fff
+    padding: 40px 20px
+    border-radius: 25px
+    margin: 20px 0
+    box-shadow: 8px 11px 33.6px 1.4px rgba(0, 0, 0, 0.08)
+    text-decoration: none
+    color: #333
+    display: block
+    transition: .2s
+    font-family: axiforma, sans-serif
+    z-index: 0
+    margin-bottom: 400px
+    @include media-breakpoint-up(lg)
+        width: 100%
+        margin: 0 25px
+        padding: 80px 50px 50px
+        margin: 0 0px 400px
+    @include media-breakpoint-up(xl)
+        width: 800px
+    // .form__inner
+    &__inner
+    // .form__label
+    &__label
+        font-weight: 25px
+        text-transform: uppercase
+        font-weight: bold
+    //.form__input
+    &__input
+        width: 100%
+        background: #d8e1ff
+        border: 0
+        border-radius: 25px
+        margin-bottom: 30px
+        padding: 5px 20px
+    // .form__desc
+    &__desc
+        font-size: 20px
+        display: block
+        margin-bottom: 30px
+        @include media-breakpoint-up(lg)
+            width: 760px
+    // .form__btn
+    &__btn
+        border: none
+        background: transparent
+        padding: 15px 30px
+        font-size: 18px
+        border-radius: 25px
+        position: relative
+        transition: .2s
+        display: block
+        z-index: 100
+        @include media-breakpoint-up(lg)
+            font-size: 35px
+            padding: 20px 120px
+            border-radius: 100px
+            margin-right: 0
+            margin-left: auto
+        &::before
+            content: ''
+            background: linear-gradient(95deg, rgba(79,172,254,1) 0%, rgba(0,242,254,1) 100%)
+            box-shadow: 8px 11px 36.48px 1.52px rgba(0, 186, 255, 0.33)
+            border-radius: 25px
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            z-index: -1
+            opacity: 1
+            transition: .2s
+            @include media-breakpoint-up(lg)
+                padding: 40px 120px
+                border-radius: 100px
+        &::after
+            content: ''
+            background: linear-gradient(95deg, rgba(0,242,254,1) 0%,rgba(79,172,254,1) 100%)
+            box-shadow: 8px 11px 36.48px 1.52px rgba(0, 186, 255, 0.33)
+            border-radius: 25px
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            z-index: -1
+            opacity: 0
+            transition: .2s
+            @include media-breakpoint-up(lg)
+                padding: 40px 120px
+                border-radius: 100px
+        &:hover::after
+            opacity: 1
